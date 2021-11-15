@@ -1,0 +1,165 @@
+
+@import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
+
+
+:root{
+	--prim : black;
+	--sec: white;
+}
+
+html{
+	transition: all .5s ease-in;
+}
+
+html.dark{
+	--prim: white;
+	--sec: #333;
+	background-color: #111;
+	color: var(--prim);
+}
+
+*
+{
+	box-sizing: border-box;
+}
+body{
+	
+	display: flex;
+	/*flex-direction: column;*/
+	align-items: center;
+	justify-content: center;
+	font-family: 'Heebo',sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	margin: 0;
+}
+
+.toggle{
+	cursor: pointer;
+	background-color: var(--prim);
+	color: var(--sec);
+	border-radius: 5px;
+	border: 0;
+	font-size: 18px;
+	padding: 8px 12px;
+	position: absolute;
+	transition: .5s ease;
+	top: 100px;
+}
+
+.toggle:focus{
+	outline: 0;
+}
+
+.clock-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.clock{
+	position: relative;
+	background-color: grey;
+	border-radius: 99px;
+	height: 200px;
+	width: 200px;
+}
+
+.needle{
+	position: absolute;
+	background-color: var(--prim);
+	top: 50%;
+	left: 50%;
+	width: 3px;
+	height: 65px;
+	transform-origin: bottom center;
+}
+
+.needle.hour{
+	transform: translate(-50%,-100%) rotate(0deg);
+}
+
+
+.needle.minute{
+	transform: translate(-50%,-100%) rotate(30deg);
+	height: 100px;
+}
+
+.needle.second{
+	transform: translate(-50%,-100%) rotate(90deg);
+	height: 100px;
+	background-color: orange;
+}
+
+.center-point{
+	background-color: orange;
+	width: 7px;
+	height: 7px;
+	position: absolute;
+	top: 50%;
+	border-radius: 90px;
+	transform: translate(-3px,-5px);
+	left: 50%;
+}
+
+.center-point: :after{
+	content: '';
+	background-color: var(--prim);
+	width: 7px;
+	height: 7px;
+	position: absolute;
+	top: 50%;
+	border-radius: 90px;
+	transform: translate(-3px,-5px);
+	left: 50%;
+}
+
+.time{
+	font-size: 60px;
+}
+
+.date{
+	font-size: 14px;
+	color: var(--prim);
+	letter-spacing: .5px;
+	text-transform: uppercase;
+}
+.date .circle{
+	background-color: var(--prim);
+	color: var(--sec);
+	height: 18px;
+	width: 18px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	line-height: 18px;
+	font-size: 12px;
+	line-height: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
